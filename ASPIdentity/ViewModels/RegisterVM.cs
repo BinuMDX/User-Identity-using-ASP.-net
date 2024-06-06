@@ -13,7 +13,10 @@ namespace ASPIdentity.ViewModels
         [DataType(DataType.Password)]
         public string? Password { get; set; }
         [Compare("Password", ErrorMessage = "Password don't match")]
+        [Display(Name = "Confirm Password")]
+        [DataType(DataType.Password)]
         public string? ConfirmPassword { get; set; }
+        [DataType(DataType.MultilineText)]
         public string? Address { get; set; }
     }
 }
